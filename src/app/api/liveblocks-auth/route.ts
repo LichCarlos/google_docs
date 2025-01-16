@@ -8,6 +8,7 @@ const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 const liveblocks = new Liveblocks({
   secret: process.env.LIVEBLOCKS_SECRET_KEY!,
 });
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LIVEBLOCKS_CLIENT_URL = process.env.NEXT_PUBLIC_LIVEBLOCKS_CLIENT_URL || 'https://default-liveblocks-url.com';
 export async function POST(req: Request) {
   const { sessionClaims } = await auth();
