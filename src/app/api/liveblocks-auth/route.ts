@@ -10,6 +10,7 @@ const liveblocks = new Liveblocks({
 });
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LIVEBLOCKS_CLIENT_URL = process.env.NEXT_PUBLIC_LIVEBLOCKS_CLIENT_URL || 'https://default-liveblocks-url.com';
+console.log('Liveblocks Client URL:', LIVEBLOCKS_CLIENT_URL);
 export async function POST(req: Request) {
   const { sessionClaims } = await auth();
   if (!sessionClaims) {
